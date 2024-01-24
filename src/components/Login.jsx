@@ -34,6 +34,10 @@ function Login() {
       });
   };
 
+  const handleRegisterClick = () => {
+    navigator("/register");
+  };
+
   return (
     <>
       <div className="form-container bg-secondary">
@@ -63,9 +67,9 @@ function Login() {
           </label>
           <span className="text-white">
             Dont have a account ?{" "}
-            <a className="ms-2" href="/register">
+            <span className="ms-2 text-primary" onClick={handleRegisterClick}>
               Register
-            </a>{" "}
+            </span>{" "}
           </span>
           <br />
           <br />

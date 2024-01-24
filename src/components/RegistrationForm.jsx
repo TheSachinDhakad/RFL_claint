@@ -48,6 +48,10 @@ function RegistrationForm() {
     }
   };
 
+  const handleRegisterClick = () => {
+    navigate("/");
+  };
+
   return (
     <div className="form-container bg-secondary">
       <form onSubmit={handleRegistration}>
@@ -87,7 +91,10 @@ function RegistrationForm() {
           />
         </label>
         <span className="text-white">
-          Alredy have a account ? <a href="/">LogIn</a>{" "}
+          Alredy have a account ?{" "}
+          <span onClick={handleRegisterClick} className="text-primary">
+            LogIn
+          </span>{" "}
         </span>
         <br />
         <br />
