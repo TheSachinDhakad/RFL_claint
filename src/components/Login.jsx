@@ -17,7 +17,10 @@ function Login() {
 
   const handleLogin = () => {
     axios
-      .post("http://localhost:5000/api/login/", { name: username, password })
+      .post("https://rfl-server.vercel.app/api/login/", {
+        name: username,
+        password,
+      })
       .then((res) => {
         console.log(res);
         let { token, error } = res.data;

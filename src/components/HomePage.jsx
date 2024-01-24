@@ -23,7 +23,7 @@ function HomePage() {
   }, [count]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/users/").then((res) => {
+    axios.get("https://rfl-server.vercel.app/api/users/").then((res) => {
       setMyData(res.data);
     });
   }, [count]);
@@ -31,7 +31,7 @@ function HomePage() {
   const handleUpdate = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/users/${userId}`
+        `https://rfl-server.vercel.app/api/users/${userId}`
       );
       setUpdateFormData(response.data);
       setShowModal(true);
@@ -50,7 +50,7 @@ function HomePage() {
   const handleUpdateSubmit = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/users/${updateFormData._id}`,
+        `https://rfl-server.vercel.app/api/users/${updateFormData._id}`,
         updateFormData
       );
       setCount(count + 1);
@@ -73,7 +73,7 @@ function HomePage() {
   const handleDelete = async (userId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/users/${userId}`
+        `https://rfl-server.vercel.app/api/users/${userId}`
       );
       setCount(count + 1);
       console.log(`Delete successful for user with ID: ${userId}`);

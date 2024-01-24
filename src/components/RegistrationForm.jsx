@@ -26,7 +26,7 @@ function RegistrationForm() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:5000/api/register/",
+        "https://rfl-server.vercel.app/api/register/",
         formData
       );
       let { token, error } = response.data;
